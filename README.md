@@ -1,11 +1,11 @@
-XposedUnifiedNlp
+XposedGmsCoreUnifiedNlp
 -
 
-Xposed module to integrate [UnifiedNlp](https://github.com/microg/android_packages_apps_UnifiedNlp) into the system even if GAPPS are installed.
+Xposed module to integrate MicroG Services Core [MicroG UnifiedNlp](https://github.com/microg/android_packages_apps_GmsCore) into the system even if GAPPS are installed.
 
 Installation
 ---
-1. Download and install `UnifiedNlp.apk` from the UnifiedNlp [release page](https://github.com/microg/android_packages_apps_UnifiedNlp/releases/latest)
+1. Download and install `GMSCore.apk` from the UnifiedNlp [release page](https://github.com/microg/android_packages_apps_GmsCore/releases)
 2. Download and install one or more [backends](https://github.com/microg/android_packages_apps_UnifiedNlp#usage)
 3. Download and install this module
 4. Restart
@@ -20,8 +20,7 @@ Otherwise have a look at [#1](https://github.com/Rawi01/XposedUnifiedNlp/issues/
 ### It doesn't work
 
 Check that you
-* installed `UnifiedNlp.apk` and not `NetworkLocation.apk` or `LegacyNetworkLocation.apk`. If you installed UnifiedNlp vie F-Droid you have to replace it with the correct version.
-* activated the backends
+* activated the backends in MicroG Settings
 * activated network-based geolocation in Settings->Location
 
 If you followed the instructions above and it still does not work, feel free to open an issue.
