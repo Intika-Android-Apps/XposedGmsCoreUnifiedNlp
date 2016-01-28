@@ -3,7 +3,7 @@ XposedGmsCoreUnifiedNlp
 
 Xposed module to integrate MicroG Services Core [MicroG UnifiedNlp](https://github.com/microg/android_packages_apps_GmsCore) into the system even if GAPPS are installed.
 
-All Cradit to Rawi01 a huge thanks !!!!
+All Cradit to @rawi01 a huge thanks !!!!
 
 Installation
 ---
