@@ -1,4 +1,4 @@
-package de.r3w6.xposedunifiednlp;
+package be.r3w6.intika.xposedunifiednlp;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -17,9 +17,9 @@ public class UnifiedNlp implements IXposedHookZygoteInit, IXposedHookLoadPackage
     @Override
     public void initZygote(IXposedHookZygoteInit.StartupParam startupParam) throws Throwable {
         XResources.setSystemWideReplacement("android", "bool", "config_enableNetworkLocationOverlay", false);
-        XResources.setSystemWideReplacement("android", "string", "config_networkLocationProviderPackageName", "org.microg.nlp");
+        XResources.setSystemWideReplacement("android", "string", "config_networkLocationProviderPackageName", "com.google.android.gms");
         XResources.setSystemWideReplacement("android", "bool", "config_enableGeocoderOverlay", false);
-        XResources.setSystemWideReplacement("android", "string", "config_geocoderProviderPackageName", "org.microg.nlp");
+        XResources.setSystemWideReplacement("android", "string", "config_geocoderProviderPackageName", "com.google.android.gms");
         XposedBridge.log("UnifiedNlp config set");
     }
 
