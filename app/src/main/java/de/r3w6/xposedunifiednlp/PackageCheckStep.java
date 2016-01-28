@@ -1,4 +1,4 @@
-package de.r3w6.xposedunifiednlp;
+package be.r3w6.intika.xposedunifiednlp;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -17,7 +17,7 @@ class PackageCheckStep extends CheckStep {
     @Override
     public void runStep() {
         try {
-            context.getPackageManager().getPackageInfo("org.microg.nlp", PackageManager.GET_ACTIVITIES);
+            context.getPackageManager().getPackageInfo("com.google.android.gms", PackageManager.GET_ACTIVITIES);
             setState(StepState.SUCCESS);
         } catch (PackageManager.NameNotFoundException e) {
             setState(StepState.FAIL);
