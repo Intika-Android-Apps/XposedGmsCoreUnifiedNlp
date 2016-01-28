@@ -19,11 +19,11 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "de.r3w6.xposedunifiednlp"
+        applicationId "be.r3w6.intika.xposedunifiednlp"
         minSdkVersion 15
         targetSdkVersion 19
         versionCode 3
-        versionName "1.0.3-EXPERIMENTAL"
+        versionName "1.0.4-EXPERIMENTAL"
     }
 }
 
