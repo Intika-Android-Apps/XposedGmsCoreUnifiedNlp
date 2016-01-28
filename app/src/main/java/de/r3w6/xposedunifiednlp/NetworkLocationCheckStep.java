@@ -1,4 +1,4 @@
-package de.r3w6.xposedunifiednlp;
+package be.r3w6.intika.xposedunifiednlp;
 
 import android.content.Context;
 import android.location.LocationManager;
