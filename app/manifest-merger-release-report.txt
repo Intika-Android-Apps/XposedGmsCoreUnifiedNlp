@@ -56,7 +56,7 @@ ADDED from AndroidManifest.xml:20:9
 		ADDED from AndroidManifest.xml:21:13
 	android:value
 		ADDED from AndroidManifest.xml:22:13
-activity#de.r3w6.xposedunifiednlp.Settings
+activity#be.r3w6.xposedunifiednlp.Settings
 ADDED from AndroidManifest.xml:24:9
 	android:label
 		ADDED from AndroidManifest.xml:26:13
