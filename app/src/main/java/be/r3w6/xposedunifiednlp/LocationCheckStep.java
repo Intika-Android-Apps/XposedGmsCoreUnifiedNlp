@@ -12,15 +12,18 @@
  * limitations under the License.
  */
 
-package be.r3w6.intika.xposedunifiednlp;
+package be.r3w6.xposedunifiednlp;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 /**
@@ -56,7 +59,16 @@ class LocationCheckStep extends CheckStep {
                 Looper.myLooper().quit();
             }
         }, 10000);
-        locationManager.requestSingleUpdate(LocationManager.NETWORK_PROVIDER, listener, null);
+
+        if ( Build.VERSION.SDK_INT >= 23 &&
+                ContextCompat.checkSelfPermission( context, android.Manifest.permission.ACCESS_FINE_LOCATION ) != PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission( context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return ;
+        }
+
+        try { locationManager.requestSingleUpdate(LocationManager.NETWORK_PROVIDER, listener, null); }
+        catch (SecurityException e){} catch (NullPointerException e){} catch (Exception e){}
+
         Looper.loop();
         if(location != null) {
             Bundle extras = location.getExtras();
